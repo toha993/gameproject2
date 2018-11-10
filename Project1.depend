@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1541832993 source:d:\projects\project1\main.cpp
+	"character.hpp"
+
+1541833048 d:\projects\project1\character.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+
