@@ -345,7 +345,7 @@ int main()
             Window.draw(heathbar);
             Window.draw(hltbordersp);
             pola.DrawCharacter(Window);
-            if(NinjaGirl.get() >=3600 && mukto.get() >=3550)
+            if(NinjaGirl.get() >=3700 && mukto.get() >=3650)
             {
                 scene=9;
                 //cout << gtimer << endl;
@@ -372,7 +372,7 @@ int main()
             }
             else
             {
-                cout<<gtimer<<endl;
+                //cout<<gtimer<<endl;
                 gtimer--;
                 Window.draw(shesh);
             }
@@ -380,6 +380,9 @@ int main()
 
         if(scene==10)
         {
+            if(Keyboard::isKeyPressed(Keyboard::Escape)){
+                scene=0;
+            }
             Window.draw(maa);
         }
         /*if(scene==15)
