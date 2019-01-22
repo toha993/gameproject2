@@ -12,8 +12,8 @@ public:
     Sprite CharacterSprite;
     float scaleSize = .25;
 	char loc[14];
-	bool l = true;
 	bool direction=true;
+	int lyf=300;
     //string location;
 
     Character (string location) {
@@ -45,18 +45,44 @@ public:
 		else x = 0;
 	}
 
-	void setDirection() {
-//        if(this->direction) this->CharacterSprite.scale(1,1);
-        if(l==true && !this->direction){
-             this->CharacterSprite.scale(-1,1);
-             l=false;
-        }
-        if(l==false && this->direction){
-             this->CharacterSprite.scale(-1,1);
-             l=true;
+	void Attack(int x) {
+		sprintf(loc, "Attack__00%d.png", x);
+		this->CharacterTexture.loadFromFile(loc);
+		this->CharacterSprite.setTexture(CharacterTexture);
+		 if(x==9)
+            direction=true;
 
-        }
+		 //CharacterSprite.setScale(-1, 1);
 	}
+
+	void setDirection() {
+        if(this->direction && this->CharacterSprite.getScale().x == -.25)
+            this->CharacterSprite.setScale(.25, .25);
+        if(!this->direction && this->CharacterSprite.getScale().x == .25)
+            this->CharacterSprite.setScale(-.25, .25);
+	}
+	void dead() {
+		static int x = 0;
+		sprintf(loc, "Dead__00%d.png", x);
+		this->CharacterTexture.loadFromFile(loc);
+		this->CharacterSprite.setTexture(CharacterTexture);
+		if (x < 9) x++;
+		else CharacterSprite.setPosition(-500,200);
+	}
+
+    float get()
+    {
+        return CharacterSprite.getPosition().x;
+    }
+    int dying()
+    {
+        return lyf=lyf-1;
+    }
+    float reviving()
+    {
+        return lyf=lyf+150;
+    }
+
 
     void DrawCharacter(RenderWindow &app) {
         app.draw(CharacterSprite);
