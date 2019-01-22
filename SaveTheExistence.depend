@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1548184332 source:d:\savetheexistence\main.cpp
+	"character.hpp"
+	"enemy.h"
+	"friend.h"
+	"heart.h"
+	"maingunda.h"
+	<SFML/Audio.hpp>
+	<SFML/Graphics.hpp>
+
+1548149081 d:\savetheexistence\character.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1548173852 d:\savetheexistence\enemy.h
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1548092438 d:\savetheexistence\friend.h
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1548148764 d:\savetheexistence\heart.h
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1548175378 d:\savetheexistence\maingunda.h
+	<SFML/Graphics.hpp>
+	<iostream>
+
