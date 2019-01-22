@@ -80,7 +80,7 @@ public:
     }
     float reviving()
     {
-        return lyf=lyf+150;
+        return lyf=min(300,lyf+150);
     }
 
 

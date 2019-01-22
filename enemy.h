@@ -11,7 +11,7 @@ public:
     float scaleSize = .25;
 	char loc[14];
 	bool direction=true;
-	int lyf=1;
+	int lyf=30;
     //string location;
 
     enemy()  {
