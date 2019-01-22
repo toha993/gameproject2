@@ -323,7 +323,9 @@ int main()
             {
                 ck=0;
                 cp=1;
-                NinjaGirl.reviving();
+                //NinjaGirl.reviving();
+                baki=NinjaGirl.reviving();
+                //heath=(double)baki/1.5;
                 //cout << baki << endl;
             }
             if(mortese<=0)
